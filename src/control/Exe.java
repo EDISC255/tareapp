@@ -15,6 +15,7 @@ public class Exe {
         Prinsipal p=new Prinsipal();
         p.setVisible(true);
         p.setLocationRelativeTo(null);
+//    control.baseDeDatos.Conexion co=new control.baseDeDatos.Conexion();
     }
     
 }

@@ -1,10 +1,15 @@
 package vista;
 
+import java.awt.BorderLayout;
+import java.awt.Color;
+import javax.swing.JPanel;
+import javax.swing.border.Border;
+import javax.swing.border.LineBorder;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-
 /**
  *
  * @author eduardo
@@ -79,11 +84,27 @@ public class Prinsipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        AgregarTarea at = new AgregarTarea(this, true);
+        //AgregarTarea at = new AgregarTarea(this, true);
+        PanelTareaNueva at = new PanelTareaNueva();
+        this.add(at);
+        at.setBorder(new LineBorder(Color.BLACK));
+        at.setSize(400, 300);
         at.setVisible(true);
-        at.setLocationRelativeTo(null);
+        centrar(at);
+        //at.setLocationRelativeTo(null);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
+    private void centrar(JPanel pnl) {
+        int anchoDeVentana = this.getWidth(),
+                altoDeVentana = this.getHeight(),
+                anchoDePanel = pnl.getWidth(),
+                altoDePanel = pnl.getHeight(),
+                posicionEnX = (anchoDeVentana - anchoDePanel) / 2,
+                posicionEnY = (altoDeVentana - altoDePanel) / 2;
+
+        pnl.setLocation(posicionEnX, posicionEnY);
+
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
