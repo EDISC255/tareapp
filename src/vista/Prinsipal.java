@@ -53,6 +53,11 @@ public class Prinsipal extends javax.swing.JFrame {
         jMenu1.add(jMenuItem1);
 
         jMenuItem2.setText("ELIMINAR");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem2);
 
         jMenuBar1.add(jMenu1);
@@ -93,6 +98,16 @@ public class Prinsipal extends javax.swing.JFrame {
         centrar(at);
         //at.setLocationRelativeTo(null);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        PanelEliminarTarea at = new PanelEliminarTarea();
+        this.add(at);
+        at.setBorder(new LineBorder(Color.BLACK));
+        at.setSize(400, 300);
+        at.setVisible(true);
+        centrar(at);
+        
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void centrar(JPanel pnl) {
         int anchoDeVentana = this.getWidth(),

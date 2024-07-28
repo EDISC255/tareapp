@@ -25,14 +25,14 @@ sqlite3 tarea.bd
 2. SE CREARA LA TABLA **TAREA**
 
 ```sql
-create table tarea{
+create table tarea(
     id integer autoincremnt,
     titulo text,
-    descricion text,
+    descripcion text,
     fecha text,
     status integer,
     primary key (id)
-}
+)
 ```
 
 ---

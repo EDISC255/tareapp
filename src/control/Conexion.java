@@ -19,9 +19,9 @@ import java.sql.ResultSet;
 public class Conexion {
 
     private Connection co;
-    private PreparedStatement pst;
-    private Statement st;
-    private ResultSet rs;
+    protected PreparedStatement pst;
+    protected Statement st;
+    protected ResultSet rs;
     public Conexion() {
         try {
             Class.forName("org.sqlite.JDBC");
@@ -32,6 +32,9 @@ public class Conexion {
             System.out.println("Ha ocurrido un error"+e);
         }
     }
-    
+
+    public Connection getCo() {
+        return co;
+    }
     
 }
