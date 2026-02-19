@@ -5,7 +5,7 @@
 package vista;
 
 import control.Tarea;
-
+import vista.AgregarTarea;
 /**
  *
  * @author eduardo
@@ -16,8 +16,7 @@ public class App extends javax.swing.JFrame {
      * Creates new form App
      */
     public App() {
-        initComponents();
-       
+        initComponents(); 
     }
 
     /**
@@ -29,7 +28,7 @@ public class App extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jDesktopPane2 = new javax.swing.JDesktopPane();
+        dsktpPnlMain = new javax.swing.JDesktopPane();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         cbbFechasFiltro = new javax.swing.JComboBox<>();
@@ -65,23 +64,23 @@ public class App extends javax.swing.JFrame {
             }
         });
 
-        jDesktopPane2.setLayer(jScrollPane1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane2.setLayer(cbbFechasFiltro, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        dsktpPnlMain.setLayer(jScrollPane1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        dsktpPnlMain.setLayer(cbbFechasFiltro, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        javax.swing.GroupLayout jDesktopPane2Layout = new javax.swing.GroupLayout(jDesktopPane2);
-        jDesktopPane2.setLayout(jDesktopPane2Layout);
-        jDesktopPane2Layout.setHorizontalGroup(
-            jDesktopPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDesktopPane2Layout.createSequentialGroup()
+        javax.swing.GroupLayout dsktpPnlMainLayout = new javax.swing.GroupLayout(dsktpPnlMain);
+        dsktpPnlMain.setLayout(dsktpPnlMainLayout);
+        dsktpPnlMainLayout.setHorizontalGroup(
+            dsktpPnlMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dsktpPnlMainLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jDesktopPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(dsktpPnlMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 488, Short.MAX_VALUE)
                     .addComponent(cbbFechasFiltro, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
-        jDesktopPane2Layout.setVerticalGroup(
-            jDesktopPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDesktopPane2Layout.createSequentialGroup()
+        dsktpPnlMainLayout.setVerticalGroup(
+            dsktpPnlMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dsktpPnlMainLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(cbbFechasFiltro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
@@ -110,18 +109,21 @@ public class App extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane2)
+            .addComponent(dsktpPnlMain)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane2)
+            .addComponent(dsktpPnlMain)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void mIAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mIAgregarActionPerformed
-        
+        AgregarTarea at =  new AgregarTarea();
+        dsktpPnlMain.add(at);
+        at.toFront();
+        at.setVisible(true);
     }//GEN-LAST:event_mIAgregarActionPerformed
 
     private void cbbFechasFiltroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbbFechasFiltroActionPerformed
@@ -130,7 +132,7 @@ public class App extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> cbbFechasFiltro;
-    private javax.swing.JDesktopPane jDesktopPane2;
+    private javax.swing.JDesktopPane dsktpPnlMain;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
