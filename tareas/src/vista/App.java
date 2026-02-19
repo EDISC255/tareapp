@@ -19,6 +19,7 @@ public class App extends javax.swing.JFrame {
         initComponents(); 
         tarea=new Tarea();
         tarea.consultarFechasRegistradas(cbbFechasFiltro);
+        tarea.llenarTablaPrinsipal(jTable1);
     }
 
     /**

@@ -6,7 +6,9 @@ import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.swing.JComboBox;
+import javax.swing.JTable;
 import javax.swing.JTextArea;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -71,4 +73,20 @@ public class Tarea {
         }
 
     }
+    public void llenarTablaPrinsipal(JTable tbl) {
+        DefaultTableModel tm=(DefaultTableModel)tbl.getModel();
+        try {
+            con.setSt(con.getCon().createStatement());
+            con.setRs(con.getSt().executeQuery("SELECT t.id, t.titulo, t.descripcion, t.status  FROM tarea t ;"));
+            while (con.getRs().next()) {                
+                String[] arrTareas={con.getRs().getString("id"),con.getRs().getString("titulo"),con.getRs().getString("descripcion"),con.getRs().getString("status") };
+                tm.addRow(arrTareas);
+            }
+           tbl.setModel(tm);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+    
 }
