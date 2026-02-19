@@ -17,6 +17,8 @@ public class App extends javax.swing.JFrame {
      */
     public App() {
         initComponents(); 
+        tarea=new Tarea();
+        tarea.consultarFechasRegistradas(cbbFechasFiltro);
     }
 
     /**
@@ -127,9 +129,10 @@ public class App extends javax.swing.JFrame {
     }//GEN-LAST:event_mIAgregarActionPerformed
 
     private void cbbFechasFiltroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbbFechasFiltroActionPerformed
-
+        
     }//GEN-LAST:event_cbbFechasFiltroActionPerformed
-
+    private Tarea tarea;
+            
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> cbbFechasFiltro;
     private javax.swing.JDesktopPane dsktpPnlMain;
